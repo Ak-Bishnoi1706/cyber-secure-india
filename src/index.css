@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: background 0.3s, color 0.3s;
+    background: linear-gradient(to right, rgba(0, 230, 118, 0.5), rgba(2, 198, 205, 0.3), rgba(26, 35, 126, 0.5));
+}
+
+.dark {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgb(0, 228, 118, 0.4), rgba(0, 0, 0, 0.7));
+    color: #fff;
+}
+
+/* Navbar */
+.darkNav {
+  background: linear-gradient(to right, #00e676, rgb(26, 35, 126, 0.7), #000000);
+  box-shadow: 0 0 30px white;
+}
+
+/* Home */
+.neon-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  position: relative;
+}
+.animate-shine {
+  animation: shine 3s linear infinite;
+  background-size: 200% 200%;
+}
+@keyframes shine {
+  0% { background-position: 0% 50%;}
+  100% {background-position: 200% 50%;}
+}
+
+/* Hexogon shape */
+.hexagon {
+  clip-path: polygon(
+    50% 0%, 93% 25%, 93% 75%,
+    50% 100%, 7% 75%, 7% 25%
+  );
+}
+
+/* Base hexagons with glow */
+.hexagon.base {
+  width: 60px;
+  height: 34px;
+  background: radial-gradient(circle, #d1d5db, #9ca3af); /* soft gray */
+  box-shadow: 0 0 6px rgba(156, 163, 175, 0.4);
+}
+
+/* Dark theme stronger glow */
+.dark .hexagon.base {
+  background: radial-gradient(circle, #6a1b9a, #311b92);
+  box-shadow: 0 0 15px rgba(156, 39, 176, 0.8),
+              inset 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+/* Floating hexagons */
+.hexagon.floating {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 34px;
+  clip-path: polygon(
+    50% 0%, 93% 25%, 93% 75%,
+    50% 100%, 7% 75%, 7% 25%
+  );
+  box-shadow: 
+    0 0 12px rgba(255, 255, 255, 0.4),
+    inset 0 0 6px rgba(255, 255, 255, 0.2);
+  filter: blur(0.5px); /* softer edges */
+}
+
+/* Security Pages */
+
+/* Default Light Theme */
+.best-practices-section {
+  background: linear-gradient(to right, #4a148c, #0d47a1);
+  color: #eee;
+  box-shadow: inset 0 9 20px rgba(0,0,0,0.9);
+
+}
+
+.quiz-box {
+  background: #fafafa;
+  color: #111;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+}
+.quiz-btn-wrong {
+  background-color: #ef4444; /* red-500 */
+  color: #fff;
+}
+.quiz-btn-wrong:hover {
+  background-color: #b91c1c; /* red-700 */
+}
+
+.quiz-btn-correct {
+  background-color: #16a34a; /* green-600 */
+  color: #fff;
+}
+.quiz-btn-correct:hover {
+  background-color: #166534; /* green-800 */
+}
+
+/* Dark Theme */
+.dark .best-practices-section {
+  background: linear-gradient(to bottom, #1e2465 ,#4a148c);
+  color: white;
+  box-shadow: inset 0 0 10px white;
+}
+
+.dark .quiz-box {
+  background: #1e1e2f;
+  color: #ccc;
+}
+
+.dark .quiz-btn-wrong {
+  background-color: #dc2626; /* red-600 */
+  color: #fff;
+}
+.dark .quiz-btn-wrong:hover {
+  background-color: #991b1b; /* darker red */
+}
+
+.dark .quiz-btn-correct {
+  background-color: #22c55e; /* green-500 */
+  color: #fff;
+}
+.dark .quiz-btn-correct:hover {
+  background-color: #15803d; /* darker green */
+}
