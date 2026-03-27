@@ -131,8 +131,18 @@ Contributions are welcome!
 - Push to the branch (`gti push origin feature-name`)
 - Open a pull request
 
+---
+
 ## 🏷 **License**
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👩🏻‍💻 Authors
+
+**Anita Bishnoi**
+
+---
 
 ## 👐🏻 **Acknowledgements**
 - Inspiration from real-world cyber security practices
